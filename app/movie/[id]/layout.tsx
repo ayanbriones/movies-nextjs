@@ -29,14 +29,12 @@ export default async function MovieId({
   const data: Movie = await getData(params.id)
   return (
     <div className='min-h-screen p-10'>
-      <div className='h-[80vh] relative'>
+      <div className='h-[80vh] relative mb-4'>
         <Image
           src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`}
           alt='image movie'
           className='object-cover w-full rounded-lg'
-          width={1920}
-          height={1080}
-          //   fill
+          fill
         />
       </div>
       <div className='flex flex-col lg:flex-row mt-10 gap-x-2'>
