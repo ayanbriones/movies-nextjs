@@ -29,22 +29,22 @@ export default async function Home() {
             Top and Trending Movies
           </h2>
         </div>
-        <div className='grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-8'>
+        <div className='grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-5 xl:grid-cols-6 xl:gap-8'>
           {data.results.map((movie) => (
             <div
-              className='flex flex-col overflow-hidden  rounded-lg border bg-white'
+              className='flex flex-col overflow-hidden rounded-lg border bg-white'
               key={movie.id}
             >
               <Link
                 href={`/movie/${movie.id}`}
-                className='group relative block h-48 overflow-hidden bg-gray-100 md:h-64'
+                className='group relative block h-56 overflow-hidden bg-gray-100 md:h-80'
               >
                 <Image
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   width={500}
                   height={750}
                   alt='image movie banner'
-                  className='absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110'
+                  className='absolute inset-0 h-full w-full object-cover md:object-top transition duration-200 group-hover:scale-110'
                 />
               </Link>
               <div className='flex flex-1 flex-col p-4 sm:p-6'>
